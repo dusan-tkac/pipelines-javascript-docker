@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dusantkacpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dusantkacpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dusantkacpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dusantkacpipelinesjavascriptdocker 
+          image: dusanscontainerregistry.azurecr.io/dusantkacpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
